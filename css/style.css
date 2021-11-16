@@ -1,55 +1,54 @@
-:root{
-    --color-primary:#104041
+:root {
+    --color-primary: #104041;
+    --color-secondary: rgba(16, 64, 65, 0.6);
+    --color-default: white;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    }
-body{
-    font-size: 16px;
+}
 
-    font-family: 'Helvetica Neue',Roboto,Helvetica,Arial,sans-serif;
+body {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #333;
     line-height: 1.6;
     position: relative;
-    }
-    
-
-.avatar{
-    margin-bottom: 10px;
-
 }
 
-.avatar img{
+.avatar {
+    margin-bottom: 10px;
+}
+
+.avatar img {
     width: 200px;
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
 }
-.start{
+
+.start {
     display: grid;
     justify-content: center;
-    background: 
-    linear-gradient(
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.2)
-      ),
-      
-    url(../images/christopher-gower-m_HRfLhgABo-unsplash.jpeg) no-repeat center center; 
-    position: fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/christopher-gower-m_HRfLhgABo-unsplash.jpeg) no-repeat center center;
+    min-height: 100vh;
+    min-width: 100vw;
     z-index: -1;
     height: 100%;
     width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-header{
+
+
+/* Header nav */
+
+header {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -61,70 +60,149 @@ header{
     margin-left: 30px;
     margin-top: 20px;
     align-items: center;
-    background-color: white;
+    background-color: var(--color-default);
 }
-header>nav> ul{
-   
+
+header>nav>ul {
     list-style-type: none;
-    text-align: end;    
-
+    text-align: end;
 }
 
-header>nav>ul>li{
-    border:0;
+header>nav>ul>li {
+    border: 0;
     border-bottom: 1px solid #e5e7e9;
     width: 100%;
     padding: 10px;
-   
 }
-header>nav>ul>li>a{
-   text-decoration: none;
-   color: #333;
-   
+
+header>nav>ul>li>a {
+    text-decoration: none;
+    color: #333;
 }
-.active{
+
+
+/* start */
+
+.active {
     padding: 10px 20px;
 }
-.btn-primary{
-    border-radius: 50px;
-    background-color:var(--color-primary);
-    color: white;
-   
-    text-align: center;
-}
-.myName{
-    margin-top:  100px;
 
+.myName {
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding: 20px;
     align-items: center;
-   background-color:  rgba(16, 64, 65, 0.6);
-   height: 100px;
-   width: 600px;
-   color: white;
-    
+    background-color: var(--color-secondary);
+    height: 100px;
+    width: 600px;
+    color: var(--color-default);
 }
-.myName h1{
+
+.myName h1 {
     grid-column: 2/span 5;
 }
-.horizontal_menu{
-height: fit-content;
-width: fit-content;
-gap: 100px;
+
+.horizontal_menu {
+    height: fit-content;
+    width: fit-content;
+    gap: 100px;
 }
-.about_resume{
+
+.about_resume {
     display: flex;
     flex-direction: row;
-    color: white;
+    color: var(--color-default);
     justify-content: space-around;
     padding-top: 20px;
     width: 200px;
     height: 70px;
-border: 1px var(--color-primary) solid;
-border-radius: 50px;
+    background-color: var(--color-secondary);
+    border: 1px var(--color-primary) solid;
+    border-radius: 50px;
+    transition: all 0.3s linear;
 }
-.fas{
-    margin-top: 5px;
-    margin-left: 0px;
+
+.about_resume .fas {
+    display: none;
+}
+
+.about_resume:hover {
+    background-color: var(--color-primary);
+}
+
+.about_resume:hover .fas {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-default);
+}
+
+
+/* Resume */
+
+.resume {
+    margin-top: 100px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.resume h4 {
+    margin-left: 300px;
+    justify-self: left;
+    font-size: 13px;
+    font-weight: 400;
+    grid-column: 1/span 3;
+}
+
+.about-me {
+    margin-left: 100px;
+}
+
+.fa-5x {
+    color: var(--color-primary);
+    justify-self: center;
+}
+
+.progress-line {
+    height: 10px;
+    position: relative;
+    width: 100%;
+    background: #f0f0f0;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+}
+
+.progress-line span {
+    height: 100%;
+    width: 80%;
+    background: var(--color-primary);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    right: 0;
+    color: #fff;
+    top: -10px;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.progress-line span::after {
+    position: absolute;
+    content: "80%";
+    color: #fff;
+    width: 0;
+    right: 0;
+    top: -10px;
+    background-color: #000;
 }
