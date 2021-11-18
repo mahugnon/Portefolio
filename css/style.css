@@ -2,6 +2,7 @@
     --color-primary: #104041;
     --color-secondary: rgba(16, 64, 65, 0.6);
     --color-default: white;
+    --color-third: #6c7094;
 }
 
 * {
@@ -178,59 +179,18 @@ header>nav>ul>li>a {
     display: grid;
 }
 
-.langage-skills .skills-bar {
-    width: 100%;
-    margin: 0;
-}
-
-.langage-skills .skills-bar .progressbar-line {
-    position: relative;
-    height: 10px;
-    width: 100%;
-    border-radius: 50px;
-    background-color: #f0f0f0;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
-}
-
-.langage-skills .skills-bar .progressbar-line span {
-    height: 100%;
+.french span {
     width: 95%;
-    background-color: var(--color-secondary);
-    border-radius: 10px;
-    position: absolute;
 }
 
-.langage-skills .skills-bar .info {
-    margin-top: 10px;
-}
-
-.langage-skills .skills-bar .info span {
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.langage-skills .skills-bar span::before {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: -10px;
-    height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: var(--color-primary);
-}
-
-.langage-skills .skills-bar span::after {
-    position: absolute;
+.french span::after {
     content: "95%";
-    right: 0;
-    top: -28px;
-    color: var(--color-default);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 1px 8px;
-    border-radius: 3px;
-    background-color: var(--color-primary);
+}
+
+.english span {
+    width: 80%;
+}
+
+.english span::after {
+    content: "80%";
 }
