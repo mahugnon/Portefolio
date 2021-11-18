@@ -149,9 +149,9 @@ header>nav>ul>li>a {
 .resume {
     margin-top: 100px;
     padding-left: 100px;
-    display: grid;
     gap: 100px;
-    grid-template-columns: repeat(3, 1fr);
+    opacity: 0;
+    animation: showText2 0.5s 1s linear forwards;
 }
 
 .resume h1 {
@@ -162,8 +162,7 @@ header>nav>ul>li>a {
 }
 
 .about-me {
-    display: grid;
-    gap: 30px;
+    height: 300px;
 }
 
 .about-me p {
@@ -173,10 +172,57 @@ header>nav>ul>li>a {
 }
 
 
+/* Skills and abilities */
+
+.pharo span {
+    width: 95%;
+}
+
+.pharo span::after {
+    content: "95%";
+}
+
+.java span {
+    width: 80%;
+}
+
+.java span::after {
+    content: "80%";
+}
+
+.analysis span {
+    width: 85%;
+}
+
+.analysis span::after {
+    content: "85%";
+}
+
+.html span {
+    width: 85%;
+}
+
+.html span::after {
+    content: "85%";
+}
+
+.angular span {
+    width: 60%;
+}
+
+.angular span::after {
+    content: "60%";
+}
+
+.skills-habilities {
+    height: 500px;
+}
+
+
 /* langage skills */
 
 .langage-skills {
-    display: grid;
+    height: 300px;
 }
 
 .french span {
@@ -193,4 +239,23 @@ header>nav>ul>li>a {
 
 .english span::after {
     content: "80%";
+}
+
+.hobbies {
+    width: 250px;
+    height: 300px;
+}
+
+.hobbis-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+}
+
+.fa-1x {
+    color: var(--color-default);
 }
