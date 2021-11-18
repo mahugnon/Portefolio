@@ -27,3 +27,14 @@ h2 {
 .btn-primary .fas {
     display: none;
 }
+
+a {
+    text-decoration: none;
+    color: var(--color-default);
+}
+
+.fa-5x {
+    color: /*#7b7d8a*/
+    #8e8d75;
+    justify-self: center;
+}
