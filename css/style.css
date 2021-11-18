@@ -21,8 +21,8 @@ body {
     color: #333;
     line-height: 1.6;
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    width:100vw;
+    height:100vh
 }
 
 .avatar {
