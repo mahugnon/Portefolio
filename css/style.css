@@ -23,7 +23,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .avatar {
@@ -234,4 +234,5 @@ header>nav>ul>li>a {
     border-radius: 3px;
     background-color: var(--color-primary);
 }
->>>>>>>>> Temporary merge branch 2
+
+>>>>>>>>>Temporary merge branch 2
