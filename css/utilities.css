@@ -22,8 +22,6 @@ h2 {
 .fas {
     margin-top: 5px;
     margin-left: 0px;
-    opacity: 0;
-    animation: showText2 0.5s 1s linear forwards;
 }
 
 .btn-primary .fas {
@@ -36,8 +34,8 @@ a {
 }
 
 .fa-5x {
-    color: /*#7b7d8a*/
-    #8e8d75;
+    color: /*#7b7d8a  #8e8d75*/
+    var(--color-primary);
     justify-self: center;
     align-self: center;
 }

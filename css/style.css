@@ -28,7 +28,7 @@ body {
 }
 
 .avatar {
-    margin-bottom: 10px;
+    padding-bottom: 40px;
 }
 
 .avatar img {
@@ -57,35 +57,65 @@ body {
 /* Header nav */
 
 header {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
+    display: grid;
+    position: fixed;
     width: 200px;
     height: 600px;
-    z-index: 100;
+    z-index: 2;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: 20px;
     align-items: center;
     background-color: var(--color-default);
 }
 
-header>nav>ul {
+ul {
     list-style-type: none;
     text-align: end;
 }
 
-header>nav>ul>li {
+ul>li {
     border: 0;
     border-bottom: 1px solid #e5e7e9;
     width: 100%;
     padding: 10px;
 }
 
-header>nav>ul>li>a {
+ul>li>a {
     text-decoration: none;
     color: #333;
+}
+
+.social {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.social span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.social ul {
+    display: grid;
+    width: 100px;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.social .fas {
+    color: #1944bc;
+}
+
+.social .fab {
+    color: #1944bc;
+}
+
+.social li {
+    border: none;
 }
 
 
@@ -147,9 +177,9 @@ header>nav>ul>li>a {
 /* Resume */
 
 .resume {
-    margin-top: 100px;
-    padding-left: 100px;
-    gap: 100px;
+    grid-template-rows: 50px repeat(3, 1fr);
+    margin-left: 250px;
+    gap: 50px;
     opacity: 0;
     animation: showText2 0.5s 1s linear forwards;
 }
@@ -159,10 +189,16 @@ header>nav>ul>li>a {
     justify-self: center;
     align-self: center;
     grid-column: 1/span 3;
+    grid-row: 1/span 1;
 }
+
+
+/* About me */
 
 .about-me {
     height: 300px;
+    grid-column: 1/span 1;
+    grid-row: 2/span 2;
 }
 
 .about-me p {
@@ -172,7 +208,63 @@ header>nav>ul>li>a {
 }
 
 
+/* langage skills */
+
+.langage-skills {
+    height: 300px;
+    grid-column: 1/span 1;
+    grid-row: 3/span 3;
+}
+
+.french span {
+    width: 95%;
+}
+
+.french span::after {
+    content: "95%";
+}
+
+.english span {
+    width: 80%;
+}
+
+.english span::after {
+    content: "80%";
+}
+
+
+/*  Hobbies and interests */
+
+.hobbies-interests {
+    align-items: center;
+    justify-items: center;
+    grid-column: 1/span 1;
+    grid-row: 4/span 4;
+}
+
+.hobbies {
+    width: 250px;
+    height: 300px;
+}
+
+.hobbis-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+}
+
+
 /* Skills and abilities */
+
+.skills-habilities {
+    /* grid-column: 2/span 2;*/
+    grid-row: 2/span 2;
+    width: 100%;
+}
 
 .pharo span {
     width: 95%;
@@ -206,6 +298,14 @@ header>nav>ul>li>a {
     content: "85%";
 }
 
+.mysql span {
+    width: 95%;
+}
+
+.mysql span::after {
+    content: "95%";
+}
+
 .angular span {
     width: 60%;
 }
@@ -214,46 +314,91 @@ header>nav>ul>li>a {
     content: "60%";
 }
 
+.ci span {
+    width: 95%;
+}
+
+.ci span::after {
+    content: "95%";
+}
+
+.flutter span {
+    width: 60%;
+}
+
+.flutter span::after {
+    content: "60%";
+}
+
+.docker span {
+    width: 40%;
+}
+
+.docker span::after {
+    content: "40%";
+}
+
 .skills-habilities {
     height: 500px;
 }
 
 
-/* langage skills */
+/* Education jobs */
 
-.langage-skills {
-    height: 300px;
+.education-jobs {
+    grid-row: 2/span 4;
+    grid-column: 3/span 3;
 }
 
-.french span {
-    width: 95%;
+.timeline {
+    position: relative;
+    margin: 0 auto;
 }
 
-.french span::after {
-    content: "95%";
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--color-secondary);
+    top: 0;
+    bottom: 0;
+    margin-left: -3px;
 }
 
-.english span {
-    width: 80%;
+.timeline-event {
+    padding: 10px 30px;
+    position: relative;
+    background-color: inherit;
+    width: calc(100%-6px);
 }
 
-.english span::after {
-    content: "80%";
-}
-
-.hobbies {
-    width: 250px;
-    height: 300px;
-}
-
-.hobbis-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    left: -7.5px;
     background-color: var(--color-primary);
-    width: 50px;
-    height: 50px;
+    border: 4px solid var(--color-primary);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-event .event-date {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-event .event-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.timeline-event .event-description {
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .fa-1x {
