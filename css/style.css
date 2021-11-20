@@ -420,16 +420,16 @@ header nav ul li {
 }
 
 
-/*---------------------- Publication -------------------------------- */
+/*---------------------- project -------------------------------- */
 
-.publications {
+.projects {
     background-color: var(--color-secondary);
     position: relative;
-    height: 500px;
+    height: 600px;
 }
 
-.publications::before,
-.publications::after {
+.projects::before,
+.projects::after {
     content: '';
     position: absolute;
     height: 100px;
@@ -447,7 +447,7 @@ header nav ul li {
     --ms-transform-origin: left;
 }
 
-.publications h1 {
+.projects h1 {
     color: var(--color-default);
     align-self: center;
     justify-self: center;
@@ -455,12 +455,22 @@ header nav ul li {
 }
 
 
-/* Publication container */
+/* project container */
 
-.publication-container {
+.project-container {
     margin-left: 250px;
 }
 
-.publication-items {
+.project-items {
     gap: 30px;
+    height: 300px;
+}
+
+.project-item a {
+    padding-top: 10px;
+    border: 2px solid var(--color-default);
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
 }
