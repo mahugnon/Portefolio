@@ -418,3 +418,49 @@ header nav ul li {
     grid-template-columns: 50px 1fr;
     gap: 10px;
 }
+
+
+/*---------------------- Publication -------------------------------- */
+
+.publications {
+    background-color: var(--color-secondary);
+    position: relative;
+    height: 500px;
+}
+
+.publications::before,
+.publications::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -80px;
+    right: 0;
+    left: 0;
+    background-color: var(--color-default);
+    transform: skewY(-3deg);
+    transform-origin: left;
+    --webkit-transform: skewY(-3deg);
+    --webkit-transform-origin: left;
+    --moz-transform: skewY(-3deg);
+    --moz-transform-origin: left;
+    --ms-transform: skewY(-3deg);
+    --ms-transform-origin: left;
+}
+
+.publications h1 {
+    color: var(--color-default);
+    align-self: center;
+    justify-self: center;
+    font-weight: 300;
+}
+
+
+/* Publication container */
+
+.publication-container {
+    margin-left: 250px;
+}
+
+.publication-items {
+    gap: 30px;
+}
