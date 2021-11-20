@@ -146,3 +146,13 @@ a {
 row-5 {
     grid-template-rows: repeat(5, 1fr);
 }
+
+.rounded-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+}

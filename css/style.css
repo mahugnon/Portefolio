@@ -261,16 +261,6 @@ ul>li>a {
     height: 300px;
 }
 
-.hobbis-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    width: 50px;
-    height: 50px;
-}
-
 
 /* Skills and abilities */
 
@@ -426,9 +416,16 @@ ul>li>a {
     color: var(--color-third);
 }
 
-.my-specialities {
+.award {
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 2;
+    height: 250px;
+}
+
+.award-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
 }
