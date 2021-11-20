@@ -27,16 +27,86 @@ body {
     overflow-x: hidden;
 }
 
+
+/* Header nav */
+
+header {
+    display: grid;
+    position: fixed;
+    width: 210px;
+    height: 590px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-top: 20px;
+    align-items: center;
+    background-color: var(--color-default);
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+.menu-item:hover {
+    border: 1px solid var(--color-primary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--color-default);
+    align-content: center;
+    background-color: var(--color-primary);
+}
+
+
+/* header social */
+
 .avatar {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 .avatar img {
-    width: 200px;
+    width: 210px;
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.social {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.social span {
+    font-size: 12px;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.social ul {
+    display: grid;
+    position: relative;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.social .fas {
+    color: #1944bc;
+}
+
+.social .fab {
+    color: #1944bc;
+}
+
+.social li {
+    border: none;
+    padding: 20px;
+}
+
+
+/* start */
 
 .start {
     display: grid;
@@ -52,87 +122,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
-
-/* Header nav */
-
-header {
-    display: grid;
-    position: fixed;
-    width: 200px;
-    height: 600px;
-    z-index: 2;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    margin-left: 10px;
-    margin-top: 20px;
-    align-items: center;
-    background-color: var(--color-default);
-}
-
-.menu-item:hover {
-    border: 1px solid var(--color-primary);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 5px 10px;
-    border-radius: 20px;
-    color: var(--color-default);
-    align-content: center;
-    background-color: var(--color-primary);
-}
-
-ul {
-    list-style-type: none;
-    text-align: end;
-}
-
-ul>li {
-    border: 0;
-    border-bottom: 1px solid #e5e7e9;
-    width: 100%;
-    padding: 10px;
-}
-
-ul>li>a {
-    text-decoration: none;
-    color: #333;
-}
-
-
-/* header social */
-
-.social {
-    margin-top: 10px;
-    display: grid;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.social span {
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.social ul {
-    display: grid;
-    width: 100px;
-    height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.social .fas {
-    color: #1944bc;
-}
-
-.social .fab {
-    color: #1944bc;
-}
-
-.social li {
-    border: none;
-}
-
-
-/* start */
 
 .active {
     padding: 10px 20px;
