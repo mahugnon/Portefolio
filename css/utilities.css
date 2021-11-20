@@ -24,6 +24,10 @@ h2 {
     margin-left: 0px;
 }
 
+.fa-1x {
+    color: var(--color-default);
+}
+
 .btn-primary .fas {
     display: none;
 }

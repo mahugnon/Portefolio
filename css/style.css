@@ -70,6 +70,16 @@ header {
     background-color: var(--color-default);
 }
 
+.menu-item:hover {
+    border: 1px solid var(--color-primary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--color-default);
+    align-content: center;
+    background-color: var(--color-primary);
+}
+
 ul {
     list-style-type: none;
     text-align: end;
@@ -86,6 +96,9 @@ ul>li>a {
     text-decoration: none;
     color: #333;
 }
+
+
+/* header social */
 
 .social {
     margin-top: 10px;
@@ -340,10 +353,6 @@ ul>li>a {
     content: "40%";
 }
 
-.skills-habilities {
-    height: 500px;
-}
-
 
 /* Education jobs */
 
@@ -417,6 +426,9 @@ ul>li>a {
     color: var(--color-third);
 }
 
-.fa-1x {
-    color: var(--color-default);
+.my-specialities {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
 }
