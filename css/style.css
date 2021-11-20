@@ -423,7 +423,7 @@ header nav ul li {
 /*---------------------- project -------------------------------- */
 
 .projects {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     position: relative;
     height: 600px;
 }
@@ -470,7 +470,17 @@ header nav ul li {
     padding-top: 10px;
     border: 2px solid var(--color-default);
     width: 100px;
+    height: 50px;
     text-align: center;
     border-radius: 10px;
     font-size: 16px;
+}
+
+.project-item a:hover {
+    box-shadow: 5px 5px 10px rgba(252, 252, 252, 0.2);
+}
+
+.project-item p {
+    color: var(--color-default);
+    font-weight: 300;
 }
