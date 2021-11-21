@@ -1,6 +1,6 @@
 :root {
     --color-primary: #104041;
-    --color-secondary: rgba(16, 64, 65, 0.6);
+    --color-secondary: rgba(16, 64, 65, 0.7);
     --color-default: white;
     --color-third: #6c7094;
 }
@@ -45,13 +45,13 @@ header {
 }
 
 header nav ul li {
-    padding: 10px;
+    padding: 10px 25px;
 }
 
 .menu-item:hover {
     border: 1px solid var(--color-primary);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 5px 10px;
+    padding: 7px 10px;
     border-radius: 20px;
     color: var(--color-default);
     align-content: center;
@@ -93,11 +93,19 @@ header nav ul li {
 }
 
 .social .fas {
-    color: #1944bc;
+    color: var(--color-primary);
+}
+
+.social .fas:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .social .fab {
-    color: #1944bc;
+    color: var(--color-primary);
+}
+
+.social .fab:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .social li {
@@ -130,17 +138,16 @@ header nav ul li {
 .myName {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     padding: 20px;
-    align-items: center;
     background-color: var(--color-secondary);
     height: 100px;
-    width: 600px;
+    width: 450px;
     color: var(--color-default);
+    text-align: center;
 }
 
-.myName h1 {
-    grid-column: 2/span 5;
+.myName h4 {
+    font-weight: 300;
 }
 
 .horizontal_menu {
