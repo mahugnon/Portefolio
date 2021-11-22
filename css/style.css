@@ -131,10 +131,6 @@ header nav ul li {
     background-size: cover;
 }
 
-.active {
-    padding: 10px 20px;
-}
-
 .myName {
     margin-top: 100px;
     display: grid;
@@ -195,7 +191,8 @@ header nav ul li {
 }
 
 .resume h1 {
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 3em;
     justify-self: center;
     align-self: center;
     grid-column: 1/span 3;
@@ -429,14 +426,18 @@ header nav ul li {
 
 /*---------------------- project -------------------------------- */
 
-.projects {
+
+/* project research */
+
+.project-research {
     background-color: var(--color-primary);
     position: relative;
     height: 600px;
+    padding-left: 250px;
 }
 
-.projects::before,
-.projects::after {
+.project-research::before,
+.project-research::after {
     content: '';
     position: absolute;
     height: 100px;
@@ -454,27 +455,22 @@ header nav ul li {
     --ms-transform-origin: left;
 }
 
-.projects h1 {
+.project-research h1 {
     color: var(--color-default);
     align-self: center;
     justify-self: center;
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 3em;
 }
 
-
-/* project container */
-
-.project-container {
-    margin-left: 250px;
-}
-
-.project-items {
+.project-research .project-items {
     gap: 30px;
     height: 300px;
 }
 
-.project-item a {
+.project-research .project-item a {
     padding-top: 10px;
+    margin-top: 30px;
     border: 2px solid var(--color-default);
     width: 100px;
     height: 50px;
@@ -483,11 +479,19 @@ header nav ul li {
     font-size: 16px;
 }
 
-.project-item a:hover {
+.project-research .project-item a:hover {
     box-shadow: 5px 5px 10px rgba(252, 252, 252, 0.2);
 }
 
-.project-item p {
+.project-research .project-item p {
     color: var(--color-default);
     font-weight: 300;
 }
+
+.project-item h2 {
+    color: var(--color-default);
+    font-weight: 300;
+}
+
+
+/* procject engineering */
