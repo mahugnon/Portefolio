@@ -114,9 +114,9 @@ header nav ul li {
 }
 
 
-/* start */
+/* start-section */
 
-.start {
+.start-section {
     display: grid;
     justify-content: center;
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/christopher-gower-m_HRfLhgABo-unsplash.jpeg) no-repeat center center;
@@ -181,16 +181,16 @@ header nav ul li {
 
 /* Resume */
 
-.resume {
+.resume-section {
     grid-template-rows: 50px repeat(3, 1fr);
     margin-left: 250px;
     gap: 50px;
     opacity: 0;
-    margin-top: 100px;
+    padding-top: 100px;
     animation: showText2 0.5s 1s linear forwards;
 }
 
-.resume h1 {
+.resume-section h1 {
     font-weight: 100;
     font-size: 3em;
     justify-self: center;
@@ -441,7 +441,7 @@ header nav ul li {
     content: '';
     position: absolute;
     height: 100px;
-    bottom: -80px;
+    bottom: -100px;
     right: 0;
     left: 0;
     background-color: var(--color-default);

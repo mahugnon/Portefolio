@@ -172,3 +172,13 @@ ul>li>a {
     text-decoration: none;
     color: #333;
 }
+
+.active {
+    border: 1px solid var(--color-primary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 7px 10px;
+    border-radius: 20px;
+    color: var(--color-default);
+    align-content: center;
+    background-color: var(--color-primary);
+}
