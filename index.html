@@ -7,35 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Mahugnon | HOUEKPETODJI</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav-vertical">
+        <nav>
             <div class="avatar"> <img src="./images/honorem.jpeg" alt=""></div>
 
             <ul>
-                <li><a href="#start" class="active btn-primary">Start</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#publications">Publications </a></li>
-                <li><a href="#opensource">Opensource</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#start" class="menu-item start active">Start</a></li>
+                <li><a href="#resume" class="menu-item resume">Resume</a></li>
+                <li><a href="#projects" class="menu-item projects">Projects</a></li>
+                <li><a href="#recommendation" class="menu-item recommendation">Recommendations</a></li>
+                <li><a href="#contact" class="menu-item contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="social">
+            <span> Check social Media!</span>
 
+            <ul>
+                <li>
+
+                    <a href="https://github.com/mahugnon">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mahugnon-honore-4948b6114/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:homahugnon(At)gmail(dot)com">
+                        <i class=" fas fa-envelope"></i>
+                    </a>
+
+                </li>
+            </ul>
+
+
+
+
+
+            </ul>
+        </div>
     </header>
 
     <main>
         <!-- Start -->
-        <section id="start" class="start">
+        <section id="start" class="start-section">
 
             <div class="myName">
-                <h2> Hello I’m</h2>
+
                 <h1>HOUEKPETODJI Mahugnon Honoré</h1>
+                <h4>PhD student in Software engineering</h4>
             </div>
             <div class="grid-2 horizontal_menu">
                 <div class=" about_resume">
@@ -44,48 +74,276 @@
                     <span class="fas fa-arrow-down"></span>
                 </div>
                 <div class="about_resume">
-                    <a href="#"> <strong>Download my cv</strong> </a>
+                    <a href="./resources/cv.pdf" download="mahugnon-honore-cv.pdf"> <strong>Download my cv</strong> </a>
                     <span class="fas fa-file"></span>
                 </div>
             </div>
         </section>
 
         <!-- Resume -->
-        <section id="resume" class="resume">
-            <h4>Resume</h4>
+        <section id="resume" class="resume-section grid-3 ">
+
+            <h1>Resume</h1>
             <!-- About me -->
-            <div class="about-me">
+            <div class="about-me grid-1">
                 <i class="far fa-comment-alt fa-5x"></i>
                 <h2> <strong>About</strong> Me</h2>
-                <p>I'm currently a PhD student in software evolution in RMoD team at INRIA Lille. My PhD is in collaboration with a software company CIM. </p>
-            </div>
 
+                <p>I'm a PhD student in software evolution in RMoD team at INRIA Lille. My PhD is in collaboration with a software company CIM. </p>
+
+            </div>
             <!-- Langage and skills -->
-            <div class="langage-skills">
-                <i class="fas fa-trophy fa-5x"></i>
+            <div class="langage-skills grid-1">
+                <i class="fas fa-globe fa-5x"></i>
                 <h2> <strong>Langage</strong> Skills</h2>
-                <div class="progress-line"><span></span></div>
+                <div class="skills-bar">
+                    <div class="progressbar-line french"><span>
+                            </span></div>
+                    <div class="info">French</div>
+
+                </div>
+                <div class="skills-bar">
+                    <div class="progressbar-line english"><span>
+                            </span></div>
+                    <div class="info">English -<strong>TOEFL ITP: </strong> 547/677</div>
+
+                </div>
             </div>
 
             <!-- Hobbies and interests -->
-            <div class="hobbies-interests"></div>
+            <div class="hobbies-interests grid-1">
+                <i class="far fa-heart fa-5x"></i>
+                <h2> <strong>Hobbies &</strong> Interests</h2>
+                <div class="grid-3 hobbies">
+                    <div class="hobbis">
+                        <div class="rounded-icon">
+                            <i class="fas fa-trophy fa-1x"></i>
+                        </div>
+                        <div class="info">Board game</div>
+                    </div>
+                    <div class="hobbis">
+                        <div class="rounded-icon">
+                            <i class="fas fas fas fa-music fa-1x"></i>
+                        </div>
+                        <div class="info">Music</div>
+                    </div>
+                    <div class="hobbis">
+                        <div class="rounded-icon">
+                            <i class="fas fas far fa-futbol fa-1x"></i>
+                        </div>
+                        <div class="info">Football</div>
+                    </div>
+
+                </div>
+            </div>
 
             <!-- Skills and Abilities -->
-            <div class="skills-habilities"></div>
+            <div class="skills-habilities grid-1">
+                <i class="fas fa-mouse fa-5x"></i>
+                <h2> <strong>Skill&</strong> Abilities</h2>
+                <div class="skills-bar">
+                    <div class="info">Software Analysis</div>
+                    <div class="progressbar-line analysis"><span>
+                    </span></div>
+                </div>
+                <div class="skills-bar">
+                    <div class="info">Java/Spring</div>
+                    <div class="progressbar-line java"><span>
+                    </span></div>
 
-            <!-- My specialities -->
-            <div class="skills-habilities"></div>
+                </div>
+                <div class="skills-bar">
+                    <div class="info">Pharo/Smalltalk</div>
+
+                    <div class="progressbar-line pharo"><span>
+                    </span></div>
+
+                </div>
+                <div class="skills-bar">
+                    <div class="info">HTML/CSS</div>
+
+                    <div class="progressbar-line html"><span>
+                    </span></div>
+
+                </div>
+                <div class="skills-bar">
+                    <div class="info">Postgress/Mysql</div>
+                    <div class="progressbar-line mysql"><span>
+                    </span></div>
+
+                </div>
+                <div class="skills-bar">
+                    <div class="info">CI/CD</div>
+                    <div class="progressbar-line ci"><span>
+                    </span></div>
+
+                </div>
+
+                <div class="skills-bar">
+                    <div class="info">Angular</div>
+                    <div class="progressbar-line angular"><span>
+                    </span></div>
+                </div>
+                <div class="skills-bar">
+                    <div class="info">Flutter</div>
+                    <div class="progressbar-line flutter"><span>
+                    </span></div>
+                </div>
+                <div class="skills-bar">
+                    <div class="info">Docker</div>
+                    <div class="progressbar-line docker"><span>
+                    </span></div>
+                </div>
+            </div>
 
             <!-- Education and Job -->
-            <div class="skills-habilities"></div>
+            <div class="education-jobs grid-1">
+                <i class="far fas fas fa-user-graduate fa-5x"></i>
+                <h2> <strong>Education&</strong> Jobs</h2>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           April 2019 - Now
+                        </span>
+                        <span class="event-name">PhD Software evolution at
+                            <a href="https://rmod.gitlabpages.inria.fr/website/">RMoD</a>/<a href="https://www.sa-cim.fr/">SA-CIM</a>
+                        </span>
+
+                        <div class="event-description">
+                            I am a CFRE PhD student as part of <a href="https://rmod.gitlabpages.inria.fr/website/">RMoD</a> team. My PhD. is in collaboration with <a href="https://www.sa-cim.fr/">SA-CIM</a>. Developping tools and technics to help
+                            <a href="https://www.sa-cim.fr/">SA-CIM</a> improving it's development practices using software analysis. improves development practices on its software system written Powerbuilder.
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           October 2018 - April 2019
+                        </span>
+                        <span class="event-name">R&D Engineer at <a href="https://www.inria.fr/en/centre-inria-lille-nord-europe">Inria</a></span>
+                        <div class="event-description">
+                            Working, as part of the <a href="https://rmod.gitlabpages.inria.fr/website/">RMoD</a> team, on software analysis.
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           March 2018 - Augest 2018
+                        </span>
+                        <span class="event-name">Internship at <a href="https://www.inrae.fr/">INRAE</a> </span>
+                        <div class="event-description">
+                            Working as part of <a href="http://www2.agroparistech.fr/Mosar-Modelisation-systemique.html">UMR MoSAR</a> team on developping a dairy cow metamolism smulator.
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           July 2018 - September 2018
+                        </span>
+                        <span class="event-name">Internship at
+                            <a href="https://educanet.pro/default.html">Educanet Tunisia</a>
+                        </span>
+                        <div class="event-description">
+                            During this internship at <a href="https://educanet.pro/default.html">Educanet Tunisia</a>, I was in charge of developing a java web <a href="https://spring.io/">Spring</a> application to notify defaults in a wiring factory.
+
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           September 2016 - September 2018
+                        </span>
+                        <span class="event-name"> Master <a href="http://www.issatso.rnu.tn/fo/description_parcours/MR-SPI.pdf">SPI(Intelligent Pervasif Systems)</a> </span>
+                        <div class="event-description">
+                            <a href="http://www.uc.rnu.tn/"> University of Sousse</a> , Tunisia. During this master, I learned software engineering. I also learned how to optimise algorithms through parallel computing and model real-world problems using
+                            machine learning algorithms.
+                        </div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           Febuary 2016 - April 2016
+                        </span>
+                        <span class="event-name">Internship at <a href="https://fr.wikipedia.org/wiki/Gab%C3%A8s">Gabès Municipality</a></span>
+                        <div class="event-description">
+                            Joinning the IT team of the Municipality, I developed a java web <a href="https://www.primefaces.org/">JSF-Primefaces</a> application to manage debts of the Municipality.
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <span class="event-date">
+                           September 2013 - June 2016
+                        </span>
+                        <span class="event-name">Bachelor degree in computer ccience</span>
+                        <div class="event-description">
+                            University of Gabès, obtained with honors.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!--  Award -->
+            <div class="award grid-1">
+                <i class="fas fa-award fa-5x"></i>
+                <h2> <strong>Scholarship </strong> </h2>
+                <div class="award-item">
+                    <div class="rounded-icon"> <i class="fas fa-trophy fa-1x"></i></div>
+                    <span class="award-name">Tunisia and Benin cooperation scholarship</span>
+                </div>
+            </div>
+
         </section>
-        <section id="publications"></section>
+        <!-- procjects -->
+        <section id="projects" class="projects-section grid-1">
+
+            <!-- procject research -->
+            <div class="project-research grid-1">
+                <h1>Research project</h1>
+
+                <div class="project-items grid-3">
+                    <div class="project-item grid-1">
+                        <h2>Improving practices in a medium french company: First step</h2>
+                        <p>Legacy systems are old software that still does useful tasks. In industrial software companies, legacy systems are often crucial for the company business model and represent a long-term business investment.</p>
+                        <a href="https://hal.inria.fr/hal-02978015/">Read More</a>
+                    </div>
+                    <div class="project-item grid-1">
+                        <h2>Modular Moose: A new generation software reverse engineering environment</h2>
+                        <p>Advanced reverse engineering tools are required to cope with the complexity of software systems and the specific requirements of numerous different tasks (re-architecturing, migration, evolution) </p>
+                        <a href="https://arxiv.org/abs/2011.10975">Read More</a>
+                    </div>
+                    <div class="project-item grid-1">
+                        <h2>Report From The Trenches: A Case Study In Modernizing Software Development Practices</h2>
+                        <p>One factor of success in software development companies is their ability to deliver good quality products, fast. For this, they need to improve their software development practices.</p>
+                        <a href="https://arxiv.org/abs/2109.05531">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- procject engineering -->
+            <!--   <div class="project-research grid-1">
+                <h1>Research project</h1>
+
+                <div class="project-items grid-3">
+                    <div class="project-item grid-1">
+                        <h2>Improving practices in a medium french company: First step</h2>
+                        <p>Legacy systems are old software that still does useful tasks. In industrial software companies, legacy systems are often crucial for the company business model and represent a long-term business investment.</p>
+                        <a href="https://hal.inria.fr/hal-02978015/">Read More</a>
+                    </div>
+                    <div class="project-item grid-1">
+                        <h2>Modular Moose: A new generation software reverse engineering environment</h2>
+                        <p>Advanced reverse engineering tools are required to cope with the complexity of software systems and the specific requirements of numerous different tasks (re-architecturing, migration, evolution) </p>
+                        <a href="https://arxiv.org/abs/2011.10975">Read More</a>
+                    </div>
+                    <div class="project-item grid-1">
+                        <h2>Report From The Trenches: A Case Study In Modernizing Software Development Practices</h2>
+                        <p>One factor of success in software development companies is their ability to deliver good quality products, fast. For this, they need to improve their software development practices.</p>
+                        <a href="https://arxiv.org/abs/2109.05531">Read More</a>
+                    </div>
+                </div>
+            </div> -->
+
+        </section>
         <section id="opensource"></section>
         <section id="contact"></section>
     </main>
     <footer></footer>
+    <script src="./script/script.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./script/script.js"></script>
 
 </html>

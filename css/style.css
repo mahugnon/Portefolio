@@ -1,13 +1,22 @@
 :root {
     --color-primary: #104041;
-    --color-secondary: rgba(16, 64, 65, 0.6);
+    --color-secondary: rgba(16, 64, 65, 0.7);
     --color-default: white;
+    --color-third: #6c7094;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-weight: 400;
 }
 
 body {
@@ -17,20 +26,101 @@ body {
     color: #333;
     line-height: 1.6;
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
+
+/* Header nav */
+
+header {
+    display: grid;
+    position: fixed;
+    width: 210px;
+    height: 590px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-top: 20px;
+    align-items: center;
+    background-color: var(--color-default);
+}
+
+header nav ul li {
+    padding: 10px 25px;
+}
+
+.menu-item:hover {
+    border: 1px solid var(--color-primary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 7px 10px;
+    border-radius: 20px;
+    color: var(--color-default);
+    align-content: center;
+    background-color: var(--color-primary);
+}
+
+
+/* header social */
+
 .avatar {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .avatar img {
-    width: 200px;
+    width: 210px;
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.start {
+.social {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.social span {
+    font-size: 12px;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.social ul {
+    display: grid;
+    position: relative;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.social .fas {
+    color: var(--color-primary);
+}
+
+.social .fas:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social .fab {
+    color: var(--color-primary);
+}
+
+.social .fab:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social li {
+    border: none;
+    padding: 20px;
+}
+
+
+/* start-section */
+
+.start-section {
     display: grid;
     justify-content: center;
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/christopher-gower-m_HRfLhgABo-unsplash.jpeg) no-repeat center center;
@@ -45,62 +135,19 @@ body {
     background-size: cover;
 }
 
-
-/* Header nav */
-
-header {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 200px;
-    height: 600px;
-    z-index: 100;
-    border-radius: 10px;
-    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
-    margin-left: 30px;
-    margin-top: 20px;
-    align-items: center;
-    background-color: var(--color-default);
-}
-
-header>nav>ul {
-    list-style-type: none;
-    text-align: end;
-}
-
-header>nav>ul>li {
-    border: 0;
-    border-bottom: 1px solid #e5e7e9;
-    width: 100%;
-    padding: 10px;
-}
-
-header>nav>ul>li>a {
-    text-decoration: none;
-    color: #333;
-}
-
-
-/* start */
-
-.active {
-    padding: 10px 20px;
-}
-
 .myName {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     padding: 20px;
-    align-items: center;
     background-color: var(--color-secondary);
     height: 100px;
-    width: 600px;
+    width: 450px;
     color: var(--color-default);
+    text-align: center;
 }
 
-.myName h1 {
-    grid-column: 2/span 5;
+.myName h4 {
+    font-weight: 300;
 }
 
 .horizontal_menu {
@@ -135,74 +182,320 @@ header>nav>ul>li>a {
     display: block;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-default);
-}
-
 
 /* Resume */
 
-.resume {
-    margin-top: 100px;
-    display: grid;
-    gap: 100px;
-    grid-template-columns: repeat(3, 1fr);
+.resume-section {
+    grid-template-rows: 50px repeat(3, 1fr);
+    margin-left: 250px;
+    gap: 50px;
+    opacity: 0;
+    padding-top: 100px;
+    animation: showText2 0.5s 1s linear forwards;
 }
 
-.resume h4 {
-    margin-left: 300px;
-    justify-self: left;
-    font-size: 13px;
-    font-weight: 400;
+.resume-section h1 {
+    font-weight: 100;
+    font-size: 3em;
+    justify-self: center;
+    align-self: center;
     grid-column: 1/span 3;
+    grid-row: 1/span 1;
 }
+
+
+/* About me */
 
 .about-me {
-    margin-left: 100px;
+    height: 300px;
+    grid-column: 1/span 1;
+    grid-row: 2/span 2;
 }
 
-.fa-5x {
-    color: var(--color-primary);
-    justify-self: center;
+.about-me p {
+    font-weight: 300;
+    font-size: 20px;
+    font-style: italic;
 }
 
-.progress-line {
-    height: 10px;
-    position: relative;
-    width: 100%;
-    background: #f0f0f0;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+
+/* langage skills */
+
+.langage-skills {
+    height: 300px;
+    grid-column: 1/span 1;
+    grid-row: 3/span 3;
 }
 
-.progress-line span {
-    height: 100%;
+.french span {
+    width: 95%;
+}
+
+.french span::after {
+    content: "95%";
+}
+
+.english span {
     width: 80%;
-    background: var(--color-primary);
-    position: absolute;
-    border-radius: 10px;
 }
 
-.progress-line span::before {
-    position: absolute;
-    content: "";
-    width: 0;
-    right: 0;
-    color: #fff;
-    top: -10px;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: #000;
-}
-
-.progress-line span::after {
-    position: absolute;
+.english span::after {
     content: "80%";
-    color: #fff;
-    width: 0;
-    right: 0;
-    top: -10px;
-    background-color: #000;
 }
+
+
+/*  Hobbies and interests */
+
+.hobbies-interests {
+    align-items: center;
+    justify-items: center;
+    grid-column: 1/span 1;
+    grid-row: 4/span 4;
+}
+
+.hobbies {
+    width: 250px;
+    height: 300px;
+}
+
+
+/* Skills and abilities */
+
+.skills-habilities {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 2/span 2;
+    width: 100%;
+}
+
+.pharo span {
+    width: 95%;
+}
+
+.pharo span::after {
+    content: "95%";
+}
+
+.java span {
+    width: 80%;
+}
+
+.java span::after {
+    content: "80%";
+}
+
+.analysis span {
+    width: 85%;
+}
+
+.analysis span::after {
+    content: "85%";
+}
+
+.html span {
+    width: 85%;
+}
+
+.html span::after {
+    content: "85%";
+}
+
+.mysql span {
+    width: 95%;
+}
+
+.mysql span::after {
+    content: "95%";
+}
+
+.angular span {
+    width: 60%;
+}
+
+.angular span::after {
+    content: "60%";
+}
+
+.ci span {
+    width: 95%;
+}
+
+.ci span::after {
+    content: "95%";
+}
+
+.flutter span {
+    width: 60%;
+}
+
+.flutter span::after {
+    content: "60%";
+}
+
+.docker span {
+    width: 40%;
+}
+
+.docker span::after {
+    content: "40%";
+}
+
+
+/* Education jobs */
+
+.education-jobs {
+    grid-row: 2/span 4;
+    grid-column: 3/span 3;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--color-secondary);
+    top: 0;
+    bottom: 0;
+    margin-left: -3px;
+}
+
+.timeline-event {
+    padding: 15px 30px;
+    display: grid;
+    position: relative;
+    width: 400px;
+    background-color: inherit;
+    /* width: calc(100%-6px); */
+}
+
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    left: -7.5px;
+    background-color: var(--color-primary);
+    border: 4px solid var(--color-primary);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-event .event-date {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-event .event-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.event-name a {
+    color: var(--color-third);
+}
+
+.timeline-event .event-description {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.timeline-event .event-description a {
+    color: var(--color-third);
+}
+
+.timeline-event a {
+    color: var(--color-third);
+}
+
+.award {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    height: 250px;
+}
+
+.award-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
+}
+
+
+/*---------------------- project -------------------------------- */
+
+
+/* project research */
+
+.project-research {
+    background-color: var(--color-primary);
+    position: relative;
+    height: 600px;
+    padding-left: 250px;
+}
+
+.project-research::before,
+.project-research::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+    background-color: var(--color-default);
+    transform: skewY(-3deg);
+    transform-origin: left;
+    --webkit-transform: skewY(-3deg);
+    --webkit-transform-origin: left;
+    --moz-transform: skewY(-3deg);
+    --moz-transform-origin: left;
+    --ms-transform: skewY(-3deg);
+    --ms-transform-origin: left;
+}
+
+.project-research h1 {
+    color: var(--color-default);
+    align-self: center;
+    justify-self: center;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+.project-research .project-items {
+    gap: 30px;
+    height: 300px;
+}
+
+.project-research .project-item a {
+    padding-top: 10px;
+    margin-top: 30px;
+    border: 2px solid var(--color-default);
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.project-research .project-item a:hover {
+    box-shadow: 5px 5px 10px rgba(252, 252, 252, 0.2);
+}
+
+.project-research .project-item p {
+    color: var(--color-default);
+    font-weight: 300;
+}
+
+.project-item h2 {
+    color: var(--color-default);
+    font-weight: 300;
+}
+
+
+/* procject engineering */
