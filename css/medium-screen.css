@@ -1,6 +1,7 @@
 @media screen and (min-width: 1900px) {
 .project-research::before, .project-research::after {
     height: -150px}
+}
 
 @media screen and (max-width: 1260px) {
     header {
