@@ -1,0 +1,96 @@
+@media screen and (max-width: 1260px) {
+    header {
+        display: none;
+    }
+    .resume-section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px repeat(5, 1fr);
+        margin: 0 25px;
+    }
+    .resume-section h1 {
+        grid-column: 1/span 2;
+    }
+    /* Skills and abilities */
+    .skills-habilities {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 3/span 4;
+        height: fit-content;
+    }
+    /* langage skills */
+    .langage-skills {
+        height: 200px;
+        grid-column: 1/span 1;
+        grid-row: 5/span 5;
+    }
+    /*  Hobbies and interests */
+    .hobbies-interests {
+        align-items: center;
+        justify-items: center;
+        grid-column: 1/span 1;
+        grid-row: 6/span 6;
+        height: 100px;
+    }
+    /* Education jobs */
+    .education-jobs {
+        grid-column: 2/span 2;
+    }
+    /* Award */
+    .award {
+        grid-row-start: 7;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .about_resume {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 706px) {
+    .resume-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px repeat(5, 1fr);
+        margin: 0 25px;
+    }
+    .resume-section h1 {
+        grid-column: 1/span 1;
+    }
+    /* Skills and abilities */
+    .skills-habilities {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: 3/span 4;
+        height: fit-content;
+    }
+    /* langage skills */
+    .langage-skills {
+        height: 200px;
+        grid-column: 1/span 1;
+        grid-row: 5/span 5;
+    }
+    /*  Hobbies and interests */
+    .hobbies-interests {
+        align-items: center;
+        justify-items: center;
+        grid-column: 1/span 1;
+        grid-row: 6/span 6;
+        height: 100px;
+    }
+    /* Education jobs */
+    .education-jobs {
+        grid-column: 1/span 1;
+    }
+    /* Award */
+    .award {
+        grid-row-start: 7;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        height: 100px;
+    }
+}
