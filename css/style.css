@@ -1,7 +1,8 @@
 :root {
     --color-primary: #104041;
     --color-secondary: rgba(16, 64, 65, 0.7);
-    --color-default: white;
+    --color-default: /*#f2f2f7*/
+    white;
     --color-third: #6c7094;
 }
 
@@ -28,6 +29,7 @@ body {
     position: relative;
     width: 100vw;
     overflow-x: hidden;
+    background-color: var(--color-default);
 }
 
 
@@ -37,7 +39,7 @@ header {
     display: grid;
     position: fixed;
     width: 210px;
-    height: 590px;
+    height: 550px;
     z-index: 2;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -72,8 +74,8 @@ header nav ul li {
 }
 
 .avatar img {
-    width: 170px;
-    height: 250px;
+    width: 160px;
+    height: 220px;
 }
 
 .social {
