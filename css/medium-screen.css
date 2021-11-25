@@ -1,6 +1,8 @@
 @media screen and (min-width: 1900px) {
-.project-research::before, .project-research::after {
-    height: -150px}
+    .project-research::before,
+    .project-research::after {
+        height: -150px
+    }
 }
 
 @media screen and (max-width: 1260px) {
@@ -58,44 +60,42 @@
 
 @media screen and (max-width: 706px) {
     .resume-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px repeat(5, 1fr);
-        margin: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
     }
     .resume-section h1 {
-        grid-column: 1/span 1;
+        order: 1;
     }
-    /* Skills and abilities */
-    .skills-habilities {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row: 3/span 4;
-        height: fit-content;
+    .about-me {
+        order: 2;
+        height: auto;
     }
-    /* langage skills */
-    .langage-skills {
-        height: 200px;
-        grid-column: 1/span 1;
-        grid-row: 5/span 5;
-    }
-    /*  Hobbies and interests */
-    .hobbies-interests {
-        align-items: center;
-        justify-items: center;
-        grid-column: 1/span 1;
-        grid-row: 6/span 6;
-        height: 100px;
-    }
-    /* Education jobs */
     .education-jobs {
-        grid-column: 1/span 1;
+        order: 3;
     }
-    /* Award */
+    .skills-habilities {
+        order: 4;
+    }
+    .langage-skills {
+        order: 5;
+    }
     .award {
-        grid-row-start: 7;
-        grid-row-end: 7;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        height: 100px;
+        order: 6;
+    }
+    .hobbies-interests {
+        order: 7;
+    }
+    .project-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 0px;
+        justify-content: space-between;
+    }
+    .project-research {
+        margin-top: 200px;
+        padding-left: 10px;
+        overflow: auto;
     }
 }
