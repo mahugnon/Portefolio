@@ -1,7 +1,8 @@
 :root {
     --color-primary: #104041;
     --color-secondary: rgba(16, 64, 65, 0.7);
-    --color-default: white;
+    --color-default: /*#f2f2f7*/
+    white;
     --color-third: #6c7094;
 }
 
@@ -20,7 +21,6 @@ h1 {
 }
 
 body {
-    
     font-size: 16px;
     font-family: 'Helvetica Neue', Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -28,8 +28,8 @@ body {
     line-height: 1.6;
     position: relative;
     width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
+    background-color: var(--color-default);
 }
 
 
@@ -39,7 +39,7 @@ header {
     display: grid;
     position: fixed;
     width: 210px;
-    height: 590px;
+    height: 550px;
     z-index: 2;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -67,14 +67,15 @@ header nav ul li {
 /* header social */
 
 .avatar {
+    display: flex;
+    justify-content: center;
     padding-bottom: 10px;
+    border-radius: 5px;
 }
 
 .avatar img {
-    width: 210px;
-    height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 160px;
+    height: 220px;
 }
 
 .social {
@@ -431,7 +432,6 @@ header nav ul li {
 .award-item {
     display: grid;
     grid-template-columns: 50px 1fr;
-    gap: 10px;
 }
 
 
@@ -443,9 +443,10 @@ header nav ul li {
 .project-research {
     background-color: var(--color-primary);
     position: relative;
-    height: 600px;
     padding-left: 250px;
+    padding-bottom: 50px;
 }
+
 
 /*.project-research::before,
 .project-research::after {
@@ -475,8 +476,7 @@ header nav ul li {
 }
 
 .project-research .project-items {
-    gap: 30px;
-    height: 300px;
+    column-gap: 30px;
 }
 
 .project-research .project-item a {
