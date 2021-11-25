@@ -50,6 +50,9 @@
         grid-column-end: 1;
         height: 100px;
     }
+    .project-research {
+        padding-left: 20px;
+    }
 }
 
 @media screen and (max-width: 975px) {

@@ -65,14 +65,15 @@ header nav ul li {
 /* header social */
 
 .avatar {
+    display: flex;
+    justify-content: center;
     padding-bottom: 10px;
+    border-radius: 5px;
 }
 
 .avatar img {
-    width: 210px;
+    width: 170px;
     height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .social {
@@ -473,8 +474,7 @@ header nav ul li {
 }
 
 .project-research .project-items {
-    gap: 30px;
-    height: 300px;
+    column-gap: 30px;
 }
 
 .project-research .project-item a {
