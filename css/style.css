@@ -297,11 +297,11 @@ header nav ul li {
 }
 
 .html span {
-    width: 85%;
+    width: 70%;
 }
 
 .html span::after {
-    content: "85%";
+    content: "70%";
 }
 
 .mysql span {
