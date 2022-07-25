@@ -21,3 +21,8 @@ document.addEventListener('scroll', () => {
         }
     });
 })
+
+function download(d) {
+    if (d == 'Download my cv') return;
+    window.location = d;
+}

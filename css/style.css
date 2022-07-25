@@ -184,6 +184,21 @@ header nav ul li {
     display: block;
 }
 
+.about_resume>select {
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-style: none;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.about_resume>select>option {
+    font-weight: 700;
+    font-size: 1em;
+}
+
 
 /* Resume */
 
