@@ -1,2 +1,2 @@
 # mahugnon.github.io
-Protefolio
+This is my online CV
