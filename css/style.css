@@ -1,3 +1,4 @@
+@import url("/node_modules/flag-icons/css/flag-icons.min.css");
 :root {
     --color-primary: #104041;
     --color-secondary: rgba(16, 64, 65, 0.7);
@@ -38,7 +39,7 @@ body {
 header {
     display: grid;
     position: fixed;
-    width: 210px;
+    width: 220px;
     height: 550px;
     z-index: 2;
     border-radius: 10px;
@@ -74,8 +75,9 @@ header nav ul li {
 }
 
 .avatar img {
-    width: 160px;
-    height: 220px;
+    width: 150px;
+    height: 210px;
+    margin-top: 3px;
 }
 
 .social {
@@ -188,8 +190,8 @@ header nav ul li {
     margin-bottom: 20px;
     background-color: transparent;
     border-style: none;
-    text-align: center;
     color: white;
+    text-align: center;
     font-weight: 700;
     font-size: 1em;
 }
@@ -197,6 +199,7 @@ header nav ul li {
 .about_resume>select>option {
     font-weight: 700;
     font-size: 1em;
+    background-color: var(--color-primary);
 }
 
 
