@@ -155,9 +155,12 @@ header nav ul li {
 }
 
 .horizontal_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     height: fit-content;
     width: fit-content;
-    gap: 100px;
+    
 }
 
 .about_resume {
@@ -166,12 +169,14 @@ header nav ul li {
     color: var(--color-default);
     justify-content: space-around;
     padding-top: 20px;
-    width: 200px;
+    width: 150px;
     height: 70px;
+    margin-right: 20px;
     background-color: var(--color-secondary);
     border: 1px var(--color-primary) solid;
     border-radius: 50px;
     transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .about_resume .fas {
