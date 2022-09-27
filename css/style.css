@@ -469,6 +469,12 @@ header nav ul li {
     padding-left: 250px;
     padding-bottom: 50px;
 }
+.project-engineering {
+    padding-left: 250px;
+    margin-top: 100px;
+    position: relative;
+    padding-bottom: 50px;
+}
 
 
 /*.project-research::before,
@@ -490,12 +496,20 @@ header nav ul li {
     --ms-transform-origin: left;
 }*/
 
-.project-research h1 {
+.project-research h1, .project-engineering h1 {
     color: var(--color-default);
     align-self: center;
     justify-self: center;
     font-weight: 100;
     font-size: 3em;
+}
+.project-engineering h1 {
+    align-self: center;
+    color: black;
+    justify-self: center;
+    font-weight: 100;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
 .project-research .project-items {
